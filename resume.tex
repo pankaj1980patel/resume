@@ -1,0 +1,126 @@
+%==============================================================
+%  Pankaj Patel --- Full-Stack / AI Systems Engineer
+%  Single-column, ATS-safe, compiles with pdflatex on Overleaf.
+%==============================================================
+\documentclass[9pt,a4paper]{extarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=0.5in,right=0.5in,top=0.4in,bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{charter}
+
+% ---- palette -------------------------------------------------
+\definecolor{ink}{HTML}{111827}
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{muted}{HTML}{4B5563}
+\definecolor{rule}{HTML}{1F4E79}
+\color{ink}
+
+% ---- section styling ----------------------------------------
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[\vspace{-2.2mm}{\color{rule}\rule{\textwidth}{0.9pt}}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+\setlist[itemize]{leftmargin=3.6mm,itemsep=0.9pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---- helpers -------------------------------------------------
+\newcommand{\role}[4]{%
+  \vspace{1.5mm}
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} \,\textcolor{muted}{\textbar}\, #2 & \textcolor{muted}{#3} \\[1pt]
+  \end{tabularx}
+  \vspace{-1.0mm}
+  \textcolor{muted}{\small\itshape #4}
+  \vspace{0.6mm}
+}
+\newcommand{\skillrow}[2]{\textbf{#1}\;\textcolor{muted}{\textbar}\; #2 \\[2.2pt]}
+\newcommand{\project}[2]{\textbf{#1} \,\textcolor{muted}{\textbar}\, \textcolor{muted}{\small #2}}
+
+%==============================================================
+\begin{document}
+
+% ---------------- HEADER -------------------------------------
+\begin{center}
+  {\Huge\bfseries\color{accent} Pankaj Patel}\\[3pt]
+  {\large Full-Stack \& Systems Engineer \;\textcolor{muted}{\textbar}\; AI, Real-Time \& Distributed Backends}\\[5pt]
+  {\small
+    \faEnvelope\; \href{mailto:pantherpatel1980@gmail.com}{pantherpatel1980@gmail.com}
+    \quad\textcolor{muted}{\textbar}\quad
+    \faPhone\; +91 95104 89540
+    \quad\textcolor{muted}{\textbar}\quad
+    \faLinkedin\; \href{https://www.linkedin.com/in/pankaj-patel-72332b228}{linkedin.com/in/pankaj-patel}
+    \quad\textcolor{muted}{\textbar}\quad
+    \faMapMarker*\; Surat, India
+  }
+\end{center}
+\vspace{1mm}
+
+% ---------------- SUMMARY ------------------------------------
+\section{Summary}
+Full-stack engineer (SDE-3) working across the stack --- React and Next.js on the front, Node.js and
+Python on the back. At VideoSDK I helped grow the platform from \textbf{thousands to millions of live
+participants}, \textbf{built the SIP system from scratch} for audio and video calls, and set up the
+infrastructure that runs \textbf{AI voice agents} in production. I also write \textbf{Go, Rust and C/C++},
+and enjoy the hard parts: finding memory leaks, fixing race conditions, and keeping large systems
+stable under load on AWS, GCP, Docker and Kubernetes.
+
+% ---------------- SKILLS -------------------------------------
+\section{Technical Skills}
+\skillrow{Languages}{TypeScript, JavaScript, Python, Go, Rust, C, C++, Java, SQL}
+\skillrow{AI \& LLM}{LLM API integration, AI voice \& chat agents, agent orchestration \& tool calling, streaming inference, prompt engineering, RAG \& vector search, evals \& observability}
+\skillrow{Frontend}{React, Next.js, Redux, Zustand, Jotai, Tailwind CSS, Material UI, ShadCN, HTML5, CSS3, real-time dashboards \& data visualization}
+\skillrow{Backend}{Node.js, Express, Python (FastAPI/asyncio), Go (goroutines, channels, context), REST, GraphQL, gRPC/Protobuf, WebSocket, HTTP/2, NATS, MQTT, event-driven microservices}
+\skillrow{Systems \& Media}{WebRTC, SIP/VoIP, RTP, MediaSoup, Kurento, SFU/media relay, Twilio SIP trunking, DTMF, BWE, TCP/UDP, Linux kernel modules, GStreamer, Rust/Tokio, concurrency \& memory profiling}
+\skillrow{Data \& Cloud}{MongoDB (aggregation pipelines), Redis, PostgreSQL, BigQuery, Oracle, AWS (EC2, S3, Lambda), GCP, Docker, Kubernetes, Helm, GitLab CI/CD, Linux}
+
+% ---------------- EXPERIENCE ---------------------------------
+\section{Professional Experience}
+
+\role{VideoSDK}{SDE-3, Full-Stack Developer}{Dec 2024 -- Present}{Surat, India \;\textbar\; Real-time communication platform}
+\begin{itemize}
+  \item \textbf{Helped scale the platform from thousands to millions of live participants}, rebuilding the signaling and media layers so they stay up when traffic spikes.
+  \item \textbf{Built the SIP system from scratch} --- signaling, media negotiation and call handling. First at the company to carry \textbf{both audio and video over SIP}, opening the door to phone calls and AI voice agents. Also integrated \textbf{Twilio SIP trunking} (REFER, re-INVITE, call transfer).
+  \item \textbf{Set up the deployment system for AI agents} in Python, so voice and chat agents can join live rooms and phone calls and scale up on their own.
+  \item \textbf{Led the removal of Archon}, our old media/signaling service --- moved everything it did onto the new setup with no downtime, cutting infrastructure cost and making the system easier to run.
+  \item Built a multi-region \textbf{signaling manager on NATS} that finds and cleans up dead sessions on its own, so every node sees the same state.
+  \item Tracked down and fixed \textbf{memory leaks, race conditions and CPU bottlenecks} in the signaling and media services, making them faster and far more reliable under load.
+  \item Built the backend in \textbf{Node.js with NATS, Redis and MongoDB} for signaling, participants and sessions, plus low-latency media pipelines on \textbf{WebRTC, MediaSoup, Kurento and RTP}.
+  \item Wrote custom \textbf{Kurento modules} in C++ (DTMF detection, RTP stream splitting) for media features the stock version didn't support.
+  \item Shipped \textbf{PK Battles} (forwards media between two rooms so people in different sessions can compete live) and \textbf{room switching}, which moves people between sessions without reconnecting.
+  \item Built health checks that \textbf{scale workers automatically}, and \textbf{live React dashboards} for BWE packets and subscription behaviour that made network issues far quicker to debug.
+\end{itemize}
+
+\role{CodeLink Infotech}{Full-Stack Web Developer}{Nov 2023 -- Dec 2024}{Surat, India}
+\begin{itemize}
+  \item \textbf{Led a team of 5 developers} on MERN-stack projects --- split up the work, reviewed code, met deadlines and mentored the juniors.
+  \item Built an \textbf{HRMS} using Strapi CMS, MongoDB aggregation pipelines and role-based dashboards, replacing a lot of manual HR work.
+  \item Built a \textbf{Hotel Management System} in Next.js with custom ShadCN components and built-in WebRTC chat and video.
+  \item Set up coding standards and a review process, which cut down on bugs and kept the codebase consistent.
+\end{itemize}
+
+% ---------------- PROJECTS -----------------------------------
+\section{Selected Projects}
+\begin{itemize}
+  \item \project{Stock Market Analytics Platform (TradingView-style)}{React, Material UI, WebSocket} --- live charts and market data updating in real time.
+  \item \project{Linux Kernel Device Driver}{C, ioctl} --- character driver with a circular queue passing data between kernel and user space.
+  \item \project{Custom Kurento Media Modules}{C++, GStreamer, RTP} --- DTMF detection and RTP stream splitting Kurento didn't support out of the box.
+\end{itemize}
+
+% ---------------- EDUCATION ----------------------------------
+\section{Education}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+  \textbf{B.Tech, Computer Engineering} \,\textcolor{muted}{\textbar}\, Bhagwan Mahavir University & \textcolor{muted}{Surat, India} \\[1pt]
+  \textcolor{muted}{\itshape GPA: 8.8 / 10.0} & \\
+\end{tabularx}
+
+\end{document}
