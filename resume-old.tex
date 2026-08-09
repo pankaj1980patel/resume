@@ -1,0 +1,129 @@
+% environment
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{mathpazo}
+
+% macro
+\renewcommand*{\labelitemi}{-}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[5][1.5mm]{
+    \subsection{#2} \vspace{-1.5mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3} & {\itshape #4, #5}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[5][0.5mm]{%
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\itshape #4} \\
+    \end{tabularx} \\ [4pt]
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #2} & {\bfseries #5} \\
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\scoreentry}[3][2.5mm]{
+    {\bfseries #2} \\
+    {\itshape #3}
+    \par\addvspace{#1}
+}
+
+% required by moderncv (needed for the file to compile standalone)
+\name{Pankaj}{Patel}
+
+% document
+\begin{document}
+
+% condensed single-line header
+\begin{center}
+    {\LARGE\bfseries\color{color1} Pankaj Patel}\quad{\color{gray}\textbar}\quad
+    \emailsymbol\enspace \emaillink{pantherpatel1980@gmail.com}\enspace{\color{gray}\textbar}\enspace
+    \mobilephonesymbol\enspace +919510489540\enspace{\color{gray}\textbar}\enspace
+    \faLinkedin\enspace \href{https://www.linkedin.com/in/pankaj-patel-72332b228}{linkedin.com}
+\end{center}
+\vspace{-4.0mm}
+
+% left column
+\begin{minipage}[t]{0.62\textwidth}
+\experienceentry{VideoSDK}{SDE-3 | Full Stack Developer}{Dec 2024 – Present}{Surat, India}
+
+\begin{itemize}
+    \item \textbf{Scaled real-time communication infrastructure from thousands to millions of concurrent participants}, overhauling signaling and media layers to handle extreme load with high availability.
+    \item Architected and optimized backend services with \textbf{Node.js, NATS, Redis, and MongoDB} for signaling, participant management, and session orchestration at massive scale.
+    \item Diagnosed and resolved critical \textbf{memory leaks and performance bottlenecks} across signaling and media layers, significantly boosting reliability and throughput under peak load.
+    \item Designed and orchestrated signaling and media workflows using \textbf{SIP, WebRTC, Kurento, and MediaSoup} to support diverse real-time use cases at scale.
+    \item Implemented a multi-region \textbf{NATS-based signaling manager} with automatic detection and cleanup of stale sessions, ensuring consistent state across distributed nodes.
+    \item Engineered custom \textbf{Kurento modules} (DTMF detection, RTP stream splitting) for advanced and low-latency media handling.
+    \item Built a \textbf{media relay system (PK Battles)} enabling real-time cross-room media forwarding and interactive live competitions between participants.
+    \item Implemented \textbf{switch room functionality}, enabling seamless participant transitions across sessions without reconnection or media interruption.
+    \item Constructed adaptive feedback systems for worker health monitoring and dynamic scaling under variable load.
+    \item Integrated \textbf{SIP trunking with Twilio}, handling complex flows including REFER, re-INVITE, and call transfers.
+    \item Created real-time dashboards for analyzing \textbf{BWE packets} and adaptive subscription workflows with live data visualization.
+    \item Drove scalable deployment workflows for \textbf{AI agents} in Python, enabling production-grade agent infrastructure.
+\end{itemize}
+
+\vspace{2.0mm}
+
+\experienceentry{CodeLink Infotech}{Full Stack Web Developer}{Nov 2023 – Dec 2024}{Surat, India}
+
+\begin{itemize}
+    \item Directed a team of 5 developers in MERN stack projects, managing tasks and ensuring timely delivery.
+    \item Mentored junior engineers, conducted code reviews, and upheld coding standards.
+    \item Programmed a robust \textbf{HRMS with Strapi CMS, MongoDB aggregation pipelines, and role-based dashboards}.
+    \item Engineered a \textbf{Hotel Management System} with custom UI components using ShadCN, Next.js, and integrated WebRTC chat/video features.
+\end{itemize}
+\vspace{2.0mm}
+
+\subsection*{Key Projects}
+\begin{itemize}
+    \item \textbf{Stock Market Platform (TradingView-like)} – Designed and implemented a stock market analysis tool with Material UI and React, featuring real-time charting and data visualization.
+    \item \textbf{Linux Driver in C} – Programmed a Linux driver with a circular queue using ioctl for efficient communication between kernel space and user space.
+\end{itemize}
+
+
+
+\end{minipage}
+\hfill
+% right column
+\begin{minipage}[t]{0.35\textwidth}
+\section{SUMMARY}
+Full-stack developer with expertise in frontend and backend development, real-time communication systems, and scalable distributed architectures. Skilled in MERN stack, SIP/VoIP, WebRTC, and media servers, with a strong focus on performance optimization, problem-solving, and delivering robust web applications.
+
+\section{EDUCATION}
+\educationentry{B.Tech}{Bhagwan Mahavir University}{Surat, India}{GPA: 8.8/10.0}
+\par
+
+\section{SKILLS}
+\textbf{Frontend} \\
+HTML, CSS, JavaScript, TypeScript, React, Next.js, Redux, Jotai, Zustand, Tailwind, Bootstrap, Material UI \\[6pt]
+\textbf{Backend} \\
+Node.js, Express.js, MongoDB, Redis, Kurento, MediaSoup, SIP, WebRTC, NATS, MQTT, GraphQL, REST, HTTP/2 \\[6pt]
+\textbf{Cloud / DevOps} \\
+AWS (EC2, S3, Lambda), GCP, Docker, Kubernetes, Helm, GitLab CI/CD \\[6pt]
+\textbf{Databases} \\
+MongoDB, Redis, BigQuery, Oracle, SQL \\[6pt]
+\textbf{Programming Languages} \\
+JavaScript, TypeScript, C, C++, Java, Python, Go, Rust \\[6pt]
+\textbf{Operating Systems} \\
+Linux (Arch, Debian, Ubuntu, Fedora, CentOS), macOS, Windows \\[6pt]
+\textbf{Protocols} \\
+SIP, RTP, WebRTC, WebSocket, TCP/IP, UDP \\[6pt]
+\textbf{Soft Skills} \\
+Leadership, Mentoring, Problem-Solving, Team Collaboration
+
+
+\end{minipage}
+
+\end{document}
