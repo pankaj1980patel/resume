@@ -60,26 +60,27 @@
 \begin{document}
 
 % ---------------- HEADER -------------------------------------
+% Condensed two-line header: name + title on one line, contacts on the next.
 \begin{center}
   \RaggedRight\centering
-  {\Huge\bfseries\color{accent} Pankaj Patel}\\[5pt]
-  {\large Full Stack Engineer, Real-Time Communications and AI Infrastructure}\\[7pt]
+  {\LARGE\bfseries\color{accent} Pankaj Patel}\enspace{\color{muted}\textbar}\enspace
+  {\large Full Stack Engineer}\\[4pt]
   {\small
-    Email: \href{mailto:pantherpatel1980@gmail.com}{pantherpatel1980@gmail.com}
-    \quad Phone: +91 95104 89540\\[2.5pt]
-    LinkedIn: \href{https://www.linkedin.com/in/pankaj-patel-72332b228}{linkedin.com/in/pankaj-patel}
-    \quad Location: Surat, India
+    Email: \href{mailto:pantherpatel1980@gmail.com}{pantherpatel1980@gmail.com}\enspace{\color{muted}\textbar}\enspace
+    Phone: +91 95104 89540\enspace{\color{muted}\textbar}\enspace
+    LinkedIn: \href{https://www.linkedin.com/in/pankaj-patel-72332b228}{linkedin.com/in/pankaj-patel}\enspace{\color{muted}\textbar}\enspace
+    Location: Surat, India
   }
 \end{center}
-\vspace{2mm}
+\vspace{1mm}
 
 % ---------------- SUMMARY ------------------------------------
 \section{Professional Summary}
-Full Stack Engineer (SDE-3) with 3+ years of experience building production web products end to end
-across React, Next.js, TypeScript, Node.js, Python, AWS, and GCP, focused on real-time communication
-and AI infrastructure platforms. I have shipped billing, SIP calling, and real-time platform features
-that scaled from thousands to millions of live participants, and I have led a team of 5 engineers
-delivering full-stack applications.
+Full Stack Engineer (SDE-3) with 3+ years building production web products end to end across React, Next.js, TypeScript,
+Node.js, Python, AWS, and GCP, focused on real-time communication and AI infrastructure platforms. I have shipped billing,
+SIP calling, and real-time platform features that scaled from thousands to millions of live participants, and I have led a team
+of 5 engineers delivering full-stack applications. Strong algorithms and data structures fundamentals and excellent problem
+solving skills, applied to low-latency media pipelines, concurrent systems, and production debugging.
 
 % ---------------- SKILLS -------------------------------------
 \section{Technical Skills}
@@ -87,9 +88,11 @@ delivering full-stack applications.
 \skillrow{Backend}{Node.js, Express, Python (FastAPI), REST APIs, GraphQL, gRPC, WebSocket, Stripe billing, usage metering, RBAC}
 \skillrow{Cloud and DevOps}{AWS (EC2, S3, Lambda), GCP, Docker, Kubernetes, GitLab CI/CD, Linux, monitoring and autoscaling}
 \skillrow{Data}{MongoDB, PostgreSQL, Redis, BigQuery, aggregation pipelines, data modeling}
-\skillrow{Systems and Real-Time}{WebRTC, SIP and VoIP, MediaSoup, NATS, Twilio SIP trunking, Go, C/C++, performance prof\/iling}
-\skillrow{AI and LLM}{LLM API integration, AI voice and chat agents, agent orchestration and tool calling, RAG and vector search}
-\skillrow{Practices}{Full-stack development, software architecture, API design, distributed systems, CI/CD, code review, mentoring}
+\skillrow{Systems and Real-Time}{WebRTC, SIP and VoIP, MediaSoup, NATS, Twilio SIP trunking, Rust, Go, C/C++, performance prof\/iling}
+\skillrow{AI and Agentic Systems}{LLM APIs, AI voice and chat agents, agentic AI workf\/lows, agent orchestration, tool calling, MCP, RAG}
+\skillrow{AI-Assisted Development}{Claude Code for feature work, refactoring, debugging, code review, custom agents and skills}
+\skillrow{Algorithms and Data Structures}{Hash maps, trees, graphs, heaps, sorting, searching, dynamic programming, greedy, complexity analysis}
+\skillrow{Practices}{Problem solving, root cause analysis, software architecture, API design, distributed systems, code review, mentoring}
 
 % ---------------- EXPERIENCE ---------------------------------
 \section{Professional Experience}
@@ -98,11 +101,11 @@ delivering full-stack applications.
 \begin{itemize}
   \item Shipped a prepaid billing platform end to end using Stripe Payment Intents, subscriptions, React usage screens, and real-time metering; this moved the business from postpaid to upfront collection and eliminated uncollectible usage.
   \item Engineered SIP calling from scratch, including signaling, media negotiation, and call handling, making it the f\/irst audio and video SIP product at the company and enabling PSTN calling and AI voice agent revenue lines.
-  \item Scaled signaling and media services from thousands to millions of live participants while maintaining zero customer-facing downtime during traf\/f\/ic spikes.
+  \item Scaled signaling and media services from thousands to millions of live participants with zero customer-facing downtime.
   \item Designed and launched an AI agent deployment platform in Python that let customers launch voice and chat agents into live rooms and phone calls with autoscaling, creating the foundation for the VideoSDK AI agent of\/fering.
   \item Led the decommissioning of the legacy Archon media and signaling service, migrating 100\% of traf\/f\/ic with zero downtime and reducing infrastructure costs while removing an entire on-call system.
   \item Launched two customer-facing features adopted by live-streaming clients: PK Battles for cross-room media forwarding, and room switching that moves participants between sessions with no reconnect.
-  \item Created live React dashboards for bandwidth estimation and subscription telemetry that reduced network issue triage from hours to minutes for support and engineering teams.
+  \item Created live React dashboards for bandwidth estimation and subscription telemetry, cutting triage from hours to minutes.
   \item Resolved memory leaks, race conditions, and CPU bottlenecks across Node.js and C++ services and added health-check-driven autoscaling, improving uptime and reducing paged incidents at peak load.
   \item Developed core backend services in Node.js with NATS, Redis, and MongoDB, plus a multi-region session manager that self-heals dead sessions and custom Kurento C++ modules for DTMF and RTP splitting.
 \end{itemize}
@@ -110,7 +113,7 @@ delivering full-stack applications.
 \role{CodeLink Infotech}{Full Stack Web Developer}{Nov 2023 - Dec 2024}{Surat, India \textbar\ Software consultancy}
 \begin{itemize}
   \item Led a team of 5 developers across MERN-stack client projects, scoping work, running code reviews, and mentoring junior engineers while delivering every project on schedule.
-  \item Delivered an HRMS using Strapi CMS, MongoDB aggregation pipelines, and role-based dashboards that replaced manual HR workf\/lows with self-serve reporting.
+  \item Delivered an HRMS using Strapi CMS, MongoDB aggregation pipelines, and role-based dashboards with self-serve reporting.
   \item Built a Hotel Management System in Next.js with a custom component library and embedded WebRTC chat and video, shipped as the primary booking and operations product for the client.
 \end{itemize}
 
@@ -119,6 +122,7 @@ delivering full-stack applications.
 \begin{itemize}
   \item \project{Stock Market Analytics Platform}{React, Material UI, WebSocket} streaming charts and market data rendered live with sub-second updates.
   \item \project{Linux Kernel Device Driver}{C, ioctl} character driver with a circular queue passing data between kernel and user space.
+  \item \project{Pub/Sub Worker}{Rust, async} publish and subscribe worker sustaining 100K concurrent connections on a single CPU core under high message traf\/f\/ic, using non-blocking async I/O, per-topic fan-out, and backpressure.
 \end{itemize}
 
 % ---------------- EDUCATION ----------------------------------
